@@ -1,0 +1,140 @@
+@charset "utf-8";
+@import '_variables', '_mixin';
+
+
+
+textarea{
+  width: 100% !important;
+  height: 100% !important; 
+  resize: none;
+}
+.attached{
+  .cont-box{
+    display: flex;
+  }
+  form{
+    width: 100%;
+  }
+  input[type=file] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+  }
+  .file_name{
+    margin: 0 .5rem 0 0;
+  }
+  .delete{
+    svg{
+      display: block;
+      height: 100%;
+      fill: red;
+    }
+  }
+  .file_box{
+    display: flex;
+    align-items: center;
+  }
+}
+
+.title-box{
+  position: relative;
+  &.fixed-text{
+    input[type="text"]{
+      padding: 0 12rem 0 1rem;
+    }
+  }
+  .fixed{
+    @include pos-absolute(vertical);
+    right: 3rem;
+    display: flex;
+    align-items: center;
+  }
+}
+.file-box{
+  display: flex;
+  align-items: center;
+  margin: 0.3rem 0;
+  .delete{
+    margin: .4rem 0 0 .6rem;
+    color: $red;
+    font-size: 1.4rem;
+  }
+}
+
+
+.calendar{
+  label{
+    position: relative;
+    display: block;
+    &::after{
+      content:'';
+      @include pos-absolute(vertical);
+      right: 1.2rem;
+      width: 2rem;
+      height: 2.2rem;
+      background: #fff url(/img/calendar-gray.svg) no-repeat center center/contain;
+      background-size: 2rem;
+    }
+  }
+  .btn-custom{
+    border: 1px solid $gray;
+    border-radius: 0;
+  }
+  .datepicker{
+    margin: 0 1rem 0 0;
+  }
+  .select-box{
+    min-width: 30rem;
+  }
+  select{
+    width: 100%;
+    -webkit-appearance: none;
+  }
+  i{
+    @include pos-absolute (vertical);
+    right: 1rem;
+  }
+}
+.add-textarea{
+  position: relative;
+  flex: 1;
+  min-height: 20rem !important;
+  background-color: $white3;
+  .cont-box{
+    position: absolute;
+    left: 15rem;
+    top: 0;
+    height: 100%;
+  }
+  .textarea-box{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .text-desc{
+      display: flex;
+      align-items: center;
+      min-height: 5rem;
+      margin: 0 0 -.1rem 0;
+      padding: 0 1rem;
+      border: 1px solid $gray;
+      background-color: $white;
+      span{
+        color: $pink;
+      }
+    }
+    .text-area{
+      height: 100%;
+      padding: 1rem;
+      background-color: $white;
+      .cont-emphasize{
+        color: $pink;
+      }
+    }
+  }
+}
+
+
+

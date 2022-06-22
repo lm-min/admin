@@ -1,0 +1,116 @@
+.breadcrumb {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  height: 4rem;
+  line-height: 4rem;
+}
+.breadcrumb li {
+  color: #999;
+  font-size: 1.4rem;
+}
+.breadcrumb li + li::before {
+  content: "/";
+  display: inline;
+  padding: 0 1rem;
+}
+.breadcrumb li a {
+  display: inline;
+}
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  position: relative;
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+.table tbody tr {
+  transition: all 0.2s ease;
+}
+.table tbody tr:hover {
+  background-color: #f7f7f7;
+}
+.table th {
+  padding: 1.5rem 0;
+  border-top: 2px solid #444;
+  border-bottom: 1px solid #707070;
+}
+.table td {
+  padding: 1.5rem 0.5rem;
+  text-align: center;
+  border-bottom: 0.1rem solid #ccc;
+  overflow: hidden;
+}
+.table td .tit {
+  text-align: left;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  max-height: 1.4em;
+}
+.table td span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  max-height: 1.4em;
+}
+.table .num {
+  width: 10rem;
+}
+.table .name, .table .day {
+  width: 12rem;
+}
+
+.pagination {
+  margin: 3rem 0 0 0;
+}
+.pagination ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pagination li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.pagination li.active {
+  background: #f7f7f7;
+  border: 0.1rem solid #999;
+}
+
+.btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0 3rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}

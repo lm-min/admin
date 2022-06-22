@@ -1,0 +1,81 @@
+@mixin pos-absolute($align: both) {
+  position: absolute;
+
+  @if $align == 'vertical' {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+  }
+  @if $align == 'horizontal' {
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+  } @else if $align == 'both' {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+}
+
+@mixin pos-fixed($direction: top){
+  position: fixed;
+
+
+  @if $direction == 'top' {
+    left: 0;
+    top: 0;
+  }
+  @if $direction == 'bottom' {
+    left: 0;
+    bottom: 0;
+  }
+  @if $direction == 'left' {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+  } 
+  @else if $direction == 'right' {
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  
+}
+
+@mixin ellipsis ($line: two) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  // line-height: 1.4;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  @if $line == 'one' {
+    -webkit-line-clamp: 1;
+    // max-height: calc(1em * 1.4 * 1);
+  } 
+  @if $line == 'two' {
+    -webkit-line-clamp: 2;
+    // max-height: calc(1em * 1.4 * 2);
+  }
+}
+
+
+//애니메이션 시작 
+@mixin ani-start {
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all .5s;
+} 
+//애니메이션 끝 
+@mixin ani-end {
+  transform: translateY(0);opacity: 1;
+}

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>testHtml</title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/js/jquery-3.2.1.min.js"></script>
+
+  <!-- css -->
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto); url(https://fonts.googleapis.com/css?family=Roboto);
+    html, body
+    {
+        height: 100%;
+        font-family: "Roboto";
+        background: #eeeeee;
+    }
+    a {
+  color: #008DE7;
+  font-style: italic;
+  font-weight: 700;
+
+  &:hover {
+    transition: all 200ms ease-in-out;
+  }
+}
+
+.Page {
+  min-width: 1260px;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+
+  &.on {
+    padding-left: 65px;
+    transition: all 100ms linear;
+    transition-delay: 300ms;
+  }
+
+  &.off {
+    padding-left: 280px;
+    transition: all 100ms linear;
+  }
+
+  &.on .side-nav {
+    width: 65px;
+    transition: all 100ms ease-in-out;
+    transition-delay: 300ms;
+  }
+
+  &.off .side-nav {
+    width: 280px;
+    transition: all 100ms ease-in-out;
+  }
+
+  &.on .sidebar-icon {
+    transform: rotate(90deg);
+    transition: all 300ms ease-in-out;
+  }
+
+  &.off .sidebar-icon {
+    transform: rotate(0deg);
+    transition: all 300ms ease-in-out;
+  }
+
+  &.on .logo {
+    padding: 21px;
+    height: 136px;
+    box-sizing: border-box;
+    transition: all 100ms ease-in-out;
+    transition-delay: 300ms;
+  }
+
+  &.off .logo {
+    width: 100%;
+    padding: 21px;
+    height: 136px;
+    box-sizing: border-box;
+    transition: all 100ms ease-in-out;
+  }
+
+  &.on #logo {
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+  }
+
+  &.off #logo {
+    opacity: 1;
+    transition: all 200ms ease-in-out;
+    transition-delay: 300ms;
+  }
+
+  &.on .tit {
+    opacity: 0;
+    transition: all 50ms linear;
+  }
+
+  &.off .tit {
+    opacity: 1;
+    transition: all 200ms linear;
+    transition-delay: 300ms;
+  }
+}
+
+.side-nav {
+  position: fixed;
+  float: left;
+  width: 280px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #303641;
+  color: #aaabae;
+  font-family: "Segoe UI";
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.gnb {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  li {   /* 모든 li */
+  
+    position: relative;
+    margin: 0;
+    font-size: 12px;
+    border-bottom: 1px solid rgba(69, 74, 84, 0.7);
+    padding: 0;
+
+    a { /* 모든 li 안의 a */
+      font-style: normal;
+      font-weight: 400;
+      position: relative;
+      display: block;
+      padding: 10px 20px;
+      color: #aaabae;
+      white-space: nowrap;
+      z-index: 2;
+
+      &:hover {
+        color: #ffffff;
+        background-color: #333944;
+        transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+      }
+
+      &.active > a {
+        background-color: #2b303a;
+        color: #ffffff;
+      }
+    }
+  }
+
+  ul { /* 모든 ul */
+    opacity: 0;
+    height: 0px;
+
+    margin: 0;
+    padding: 0;
+    li {
+      background-color: #2b303a;
+    }
+
+
+  }
+
+  li {
+    ul {
+      position: absolute;
+      visibility: hidden;
+      left: 100%;
+      top: -1px;
+      background-color: #2b303a;
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transition: opacity 0.1s linear;
+      border-top: 1px solid rgba(69, 74, 84, 0.7);
+    }
+
+    &:hover > ul {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    li {
+      ul {
+        left: 100%;
+        visibility: hidden;
+        top: -1px;
+        opacity: 0;
+        transition: opacity 0.1s linear;
+      }
+
+      &:hover ul {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+    .fa {
+      margin-right: 5px;
+    }
+}
+
+
+
+.sidebar-icon.btn-toggle {
+  position: relative;
+  float: right;
+  margin-top: 32px;
+  border: 1px solid #454a54;
+  text-align: center;
+  line-height: 1;
+  font-size: 18px;
+  padding: 6px 8px;
+  border-radius: 3px;
+  color: #888;
+  background-clip: padding-box;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+.logo {
+  width: 100%;
+  padding: 21px;
+  box-sizing: border-box;
+}
+
+
+
+.fa-codepen {
+  color: #fff;
+  margin-left: 50px;
+}
+  </style>
+</head>
+<body>
+  <!--  -->
+  <div class="Page"> 
+    <aside class="side-nav side-nav">
+      <!-- <div style="border-top:1px solid rgba(69, 74, 84, 0.7)"></div> -->
+      <div class="menu nav">
+        <ul id="menu" class="gnb">
+          <!-- <li id="menu-home"><a href="#"><i class="fa fa-home"></i><span>Home</span></a></li> -->
+          <li id="menu-comunicacao" class="dpe1">
+            <a href="#">
+              <i class="fa fa-envelope"></i>
+              <span>Comunicação</span>
+              <span class="btn-nav  fa fa-angle-double-right" style="float: right"></span>
+            </a>
+            <ul id="menu-comunicacao-sub" class="dpe2">
+                <li id="menu-mensagens" style="width: 120px" >
+                  <a href="#">
+                    Mensagens
+                    <i class="fa fa-angle-right" style="float: right; margin-right: -8px; margin-top: 2px;"></i>
+                  </a>
+                  <ul id="menu-mensagens-sub" class="dep3">
+                      <li id="menu-mensagens-enviadas" ><a href="#">Enviados</a></li>
+                      <li id="menu-mensagens-recebidas" ><a href="#">Recebidos</a></li>
+                      <li id="menu-mensagens-nova" ><a href="#">Nova Mensagem</a></li>
+                  </ul>
+                </li>
+                <li id="menu-arquivos" ><a href="#">Arquivos</a></li>
+            </ul>
+          </li>
+          <li id="menu-academico" ><a href="#"><i class="fa fa-graduation-cap"></i><span>Acadêmico</span><span class="fa fa-angle-right" style="float: right"></span></a>
+              <ul id="menu-academico-sub" >				
+                  <li id="menu-academico-avaliacoes" ><a href="#">Avaliações</a></li>
+                  <li id="menu-academico-boletim" ><a href="#">Boletim</a></li>
+              </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-table"></i><span>Agenda</span><span class="fa fa-angle-right" style="float: right"></span></a>
+              <ul>				
+                  <li><a href="#">Avaliações Agendadas</a></li>
+                  <li><a href="#">Faltas</a></li>
+                  <li><a href="#">Calendário</a></li>
+              </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-history"></i><span>Rematrícula</span></a></li>
+          <li><a href="#"><i class="fa fa-gears"></i><span>Dados Cadastrais</span></a></li>
+          <li><a href="#"><i class="fa fa-institution"></i><span>Instituição</span><span class="fa fa-angle-right" style="float: right"></span></a>
+              <ul>				
+                  <li><a href="#">Relação de Alunos</a></li>
+                  <li><a href="#">Relação de Professores</a></li>
+                  <li><a href="#">Plano de Ensino</a></li>
+                  <li><a href="#">Pagamentos Pendentes</a></li>
+                  <li><a href="#">Mapa</a></li>
+              </ul>
+          </li>
+      </ul>
+      </div>
+      <button href="#" class="sidebar-icon">
+        <span class="fa fa-bars"></span>
+      </button>
+    </aside>
+  </div>
+  <!--  -->
+  <!-- <script>
+    var toggle = true; toggle = true;
+        
+    $(".sidebar-icon ").click(function() {                
+      if (toggle){
+        $(".Page").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+        $("#menu span").css({"position":"absolute"});
+      }else{
+          $(".Page").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+          setTimeout(function() {
+            $("#menu span").css({"position":"relative"});
+        }, 400);
+      }
+          
+      toggle = !toggle;
+    });
+  </script> -->
+  <script>
+    var toggle = true; toggle = true;
+        
+    $(".btn-toggle").click(function() {                
+      if (toggle){
+        $(".Page").addClass("on").removeClass("off");
+        $(".gnb .tit").css({"position":"absolute"});
+      }else{
+          $(".Page").removeClass("on").addClass("off");
+          setTimeout(function() {
+            $(".gnb .tit").css({"position":"relative"});
+        }, 400);
+      }
+          
+      toggle = !toggle;
+    });
+  </script>
+</body>
+</html>

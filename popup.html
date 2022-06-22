@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hutu Admin</title>
+  <link rel="stylesheet" href="/webjars/jquery/jquery-ui.min.css">
+  <link rel="stylesheet" href="/webjars/jquery/jquery.timepicker.min.css">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/popup.css">
+  <link rel="stylesheet" href="/css/add.css">
+  <script src="/webjars/jquery-3.2.1.min.js"></script>
+  <script src="/webjars/jquery/jquery-ui.min.js"></script>
+  <script src="/webjars/jquery/jquery.timepicker.min.js"></script>
+  <script src="/js/common.js"></script>
+</head>
+<body>
+  <header class="popup-hd">
+    <div class="inner">
+      <div class="logo"></div>
+      <p class="title text-bold">예약정보</p>
+    </div>
+  </header>
+  <section class="popup-page inner">
+    <div class="popup-wrap add-wrap">
+      <!-- 라디오 -->
+      <ul class="cont-item">
+        <li class="cont-type">
+          <p>제목</p>
+        </li>
+        <li class="cont-box">
+          <div class="input-box">
+            <label class="btn btn-custom mgr10">
+              <input type="radio" class="radio-custom" name="reservationGroup" >Sim Center
+            </label>
+            <label class="btn btn-custom">
+              <input type="radio" class="radio-custom" name="reservationGroup" >SP Program
+            </label>
+          </div>
+        </li>
+      </ul>
+      <!-- 달력 -->
+      <ul class="add-primary cont-item">
+        <li class="cont-type">
+          <p>예약일</p>
+        </li>
+        <li class="cont-box calendar-box">
+          <input type="text" name="reservationDate" class="datepicker input-date inpBox w150" readonly>
+        </li>
+      </ul>
+      <!-- 시간 -->
+      <ul class="add-primary cont-item">
+        <li class="cont-type">
+          <p>예약시간</p>
+        </li>
+        <li class="cont-box time-box ">
+          <input type="text" name="startTime" class="input-time timepicker inpBox w150" autocomplete="off"readonly>
+          <span>~</span>
+          <input type="text" name="endTime" class="input-time timepicker inpBox w150" autocomplete="off" readonly>
+        </li>
+      </ul>
+      <!-- 장소 -->
+      <ul class="cont-item">
+        <li class="cont-type">
+          <p>장소</p>
+        </li>
+        <li class="cont-box ">
+          <div class="select-box w150">
+            <select name="placeIdx">
+              <option value>장소 선택</option>
+              <option value="9">CPCR룸</option>
+              <option value="7">디브리핑룸1</option>
+              <option value="8">디브리핑룸2</option>
+              <option value="1">시뮬레이션룸1</option>
+              <option value="2">시뮬레이션룸2</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+      <!-- 제목 -->
+      <ul class="add-primary cont-item">
+        <li class="cont-type">
+          <p>교육명</p>
+        </li>
+        <li class="cont-box">
+          <input type="text" name="courseName" class="inpBox">
+        </li>
+      </ul>
+      <!-- 기타 -->
+      <ul class="add-textarea cont-item">
+        <li class="cont-type">
+          <p>기타</p>
+        </li>
+        <li class="cont-box">
+          <textarea name="description" class="inpBox"></textarea>
+        </li>
+      </ul>
+    </div>
+    <div class="btn-wrap">
+      <button class="btn btn-option mgr10" onclick="window.close()">닫기</button>
+      <button class="btn btn-primary save-btn">저장</button>
+    </div>
+  </section>
+
+
+
+  <!-- 팝업사이즈
+  <script>
+    function popupSize(){
+      window.moveTo(0, 0);
+      
+      var w = $(document).width();
+      var h = $(document).height();
+      window.resizeTo(w, h);
+    
+      var mw = window.outerWidth - window.innerWidth;
+      var mh = window.outerHeight - window.innerHeight;
+      window.resizeBy(mw, mh);
+    
+      if (isIEVer() < 9) {            
+        mw = $(document).outerWidth() - $(window).width();
+        mh = $(document).outerHeight() - $(window).height();               
+        window.resizeBy(mw, mh);
+      }
+
+    }
+
+  </script> -->
+  
+</body>
+</html>

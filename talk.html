@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hutu Admin_ 메뉴변경버전</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/common.css">
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  <script src="/js/common.js"></script>
+</head>
+<body>
+  <header class="hd">
+    <div class="inner">
+      <h2 class="logo">
+        <a href="/"></a>
+      </h2>
+      <ul class="navbar">
+        <li class="search-form">
+          <form >
+            <input type="search" id="search" placeholder="Search">
+            <button class="search-btn">
+              <svg xmlns="//www.w3.org/2000/svg" class="icon icon-search" viewBox="0 0 24 24"><g><rect width="16" height="16" opacity="0"/><path d="M20.71 19.29l-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z"/></g></svg>
+            </button>
+          </form>
+        </li>
+        <li class="user-menu">
+          <a href="#none">
+            <img class="user-img" src="/img/people_03.jpeg" alt="프로필">   
+            <svg xmlns="//www.w3.org/2000/svg" class="arrow-down" viewBox="0 0 32 32"><path d="M22.782 13.8L17 19.582 11.218 13.8a1 1 0 0 0-1.414 1.414L16.29 21.7a.992.992 0 0 0 .71.292.997.997 0 0 0 .71-.292l6.486-6.486a1 1 0 0 0-1.414-1.414z"/></svg>
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li class="user">
+                <a href="#none" class="user-id">
+                  
+                </a>
+              </li>
+              <li>
+                <a href="#none">프로필 설정</a>
+              </li>
+              <li class="log  out">
+                <a href="#none">로그아웃</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <section class="Page off">
+    <aside class="side-nav">
+      <nav>
+        <ul class="gnb" >
+          <li class="dep1">
+            <a href="#">
+              <svg xmlns="//www.w3.org/2000/svg" class="icon-nav" viewBox="0 0 512 512"><path d="M152 38.16C161.9 47.03 162.7 62.2 153.8 72.06L81.84 152.1C77.43 156.9 71.21 159.8 64.63 159.1C58.05 160.2 51.69 157.6 47.03 152.1L7.029 112.1C-2.343 103.6-2.343 88.4 7.029 79.03C16.4 69.66 31.6 69.66 40.97 79.03L63.08 101.1L118.2 39.94C127 30.09 142.2 29.29 152.1 38.16V38.16zM152.1 198.2C161.9 207 162.7 222.2 153.8 232.1L81.84 312.1C77.43 316.9 71.21 319.8 64.63 319.1C58.05 320.2 51.69 317.6 47.03 312.1L7.029 272.1C-2.343 263.6-2.343 248.4 7.029 239C16.4 229.7 31.6 229.7 40.97 239L63.08 261.1L118.2 199.9C127 190.1 142.2 189.3 152.1 198.2V198.2zM224 96C224 78.33 238.3 64 256 64H480C497.7 64 512 78.33 512 96C512 113.7 497.7 128 480 128H256C238.3 128 224 113.7 224 96V96zM224 256C224 238.3 238.3 224 256 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H256C238.3 288 224 273.7 224 256zM160 416C160 398.3 174.3 384 192 384H480C497.7 384 512 398.3 512 416C512 433.7 497.7 448 480 448H192C174.3 448 160 433.7 160 416zM0 416C0 389.5 21.49 368 48 368C74.51 368 96 389.5 96 416C96 442.5 74.51 464 48 464C21.49 464 0 442.5 0 416z"/></svg>
+              <span class="tit">사이트 관리</span>
+              <span class="arrow-r">
+                <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+              </span>
+            </a>
+            <ul class="dep2">				
+              <li>
+                <a href="#">사용자 관리
+                  <svg xmlns="//www.w3.org/2000/svg" class="arrow-r" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+                </a>
+                <ul class="dep3">
+                  <li>
+                    <a href="/content.html">프로필 관리</a>
+                  </li>
+                  <li>
+                    <a href="#">관리자 관리</a>
+                  </li>
+                  <li>
+                    <a href="#">회원 관리</a>
+                  </li>
+                  <li>
+                    <a href="#">탈퇴자 정보</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">자료 관리</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dep1">
+            <a href="#">
+              <svg xmlns="//www.w3.org/2000/svg" class="icon-nav" viewBox="0 0 32 32"><path d="M31.966 3.896C31.878 2.866 31.046 2 30 2H2C.954 2 .122 2.866.034 3.896H0V30a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V3.896h-.034zM12 14V8h8v6h-8zm8 2v6.166h-8V16h8zM10 8v6H2V8h8zm-8 8h8v6.166H2V16zm0 14v-6h8v6H2zm10 0v-6h8v6h-8zm18 0h-8v-6h8v6zm0-7.834h-8V16h8v6.166zM30 14h-8V8h8v6z"/></svg>
+              <span class="tit">강의</span>
+              <span class="arrow-r">
+                <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+              </span>
+            </a>
+            <ul class="dep2">			
+              <li>
+                <a href="#">강의 관리
+                  <svg xmlns="//www.w3.org/2000/svg" class="arrow-r" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+                </a>
+                <ul class="dep3">
+                  <li>
+                    <a href="#">모듈 관리</a>
+                  </li>
+                  <li>
+                    <a href="#">코스 관리</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">강의 현황</a></li>
+              <li>
+                <a href="#">실습 관리
+                  <svg xmlns="//www.w3.org/2000/svg" class="arrow-r" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+                </a>
+                <ul class="dep3">
+                  <li>
+                    <a href="#">월별 실습일정</a>
+                  </li>
+                  <li>
+                    <a href="#">실습 평가 관리</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dep1">
+            <a href="#">
+              <svg xmlns="//www.w3.org/2000/svg" class="icon-nav" viewBox="0 0 32 32"><path d="M30 4H2a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 22H2V14h28v12zM2 10.084V6h28v4.084H2zM5 24h10a1 1 0 0 0 0-2H5a1 1 0 0 0 0 2zm13-1a1 1 1080 1 0 2 0 1 1 1080 1 0-2 0zm4 0a1 1 1080 1 0 2 0 1 1 1080 1 0-2 0zm4 0a1 1 1080 1 0 2 0 1 1 1080 1 0-2 0z"/></svg>
+              <span class="tit">결제</span>
+              <span class="arrow-r">
+                <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+              </span>
+            </a>
+            <ul class="dep2">			
+              <li><a href="#">계좌 관리</a></li>
+              <li><a href="#">결제 확인</a></li>
+            </ul>
+          </li>
+          <li class="dep1">
+            <a href="#">
+              <svg xmlns="//www.w3.org/2000/svg" class="icon-nav" viewBox="0 0 32 32"><path d="M4 28h2v2a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2zm20-2H4V2h20v24zm4-20v24H8v-2h16a2 2 0 0 0 2-2V6h2zM10 7a1 1 0 0 0 1 1h10a1 1 0 0 0 0-2H11a1 1 0 0 0-1 1zm-3 7h14a1 1 0 0 0 0-2H7a1 1 0 0 0 0 2zm0 4h14a1 1 0 0 0 0-2H7a1 1 0 0 0 0 2zm0 4h14a1 1 0 0 0 0-2H7a1 1 0 0 0 0 2z"/></svg>
+              <span class="tit">평가·이수증</span>
+              <span class="arrow-r">
+                <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+              </span>
+            </a>
+            <ul class="dep2">			
+              <li>
+                <a href="#">필기 평가
+                  <svg xmlns="//www.w3.org/2000/svg" class="arrow-r" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+                </a>
+                <ul class="dep3">
+                  <li>
+                    <a href="#">필기 평기 관리</a>
+                  </li>
+                  <li>
+                    <a href="#">필기 결과/채점</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">설문
+                  <svg xmlns="//www.w3.org/2000/svg" class="arrow-r" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+                </a>
+                <ul class="dep3">
+                  <li>
+                    <a href="#">설문 관리</a>
+                  </li>
+                  <li>
+                    <a href="#">설문 통계</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">이수증 관리</a></li>
+              <li><a href="#">Quiz 관리</a></li>
+            </ul>
+          </li>
+          <li class="dep1">
+            <a href="#none">
+              <svg xmlns="//www.w3.org/2000/svg" class="icon-nav" viewBox="0 0 1792 1792"><path d="M1303 964l-512 512q-10 9-23 9t-23-9l-288-288q-9-10-9-23t9-22l46-46q9-9 22-9t23 9l220 220 444-444q10-9 23-9t22 9l46 46q9 9 9 22t-9 23zm-1175 700h1408v-1024h-1408v1024zm384-1216v-288q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v288q0 14 9 23t23 9h64q14 0 23-9t9-23zm768 0v-288q0-14-9-23t-23-9h-64q-14 0-23 9t-9 23v288q0 14 9 23t23 9h64q14 0 23-9t9-23zm384-64v1280q0 52-38 90t-90 38h-1408q-52 0-90-38t-38-90v-1280q0-52 38-90t90-38h128v-96q0-66 47-113t113-47h64q66 0 113 47t47 113v96h384v-96q0-66 47-113t113-47h64q66 0 113 47t47 113v96h128q52 0 90 38t38 90z"/></svg>
+              <span class="tit">예약</span>
+              <span class="arrow-r">
+                <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+              </span>
+            </a>
+            <ul class="dep2">			
+              <li><a href="/calendar.html">교육 예약</a></li>
+              <li>
+                <a href="#none">
+                  예약 관리
+                  <svg xmlns="//www.w3.org/2000/svg" class="arrow-r" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+                </a>
+                <ul class="dep3">
+                  <li>
+                    <a href="#">예약정보</a>
+                  </li>
+                  <li id="#none" >
+                    <a href="#">장소 관리</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="dep1">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon-nav" viewBox="0 0 32 32"><path d="M26 0H2a2 2 0 0 0-2 2v28a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM2 2h4v28H2V2zm24 28H8V2h18v28zM13.862 10.734a3.028 3.028 1080 1 0 6.056 0 3.028 3.028 1080 1 0-6.056 0zm3.09 4.238c-2.734 0-4.952 2.974-4.952 6.642s9.906 3.668 9.906 0-2.218-6.642-4.954-6.642zM30 2h2v6h-2zm0 8h2v6h-2zm0 8h2v6h-2z"/></svg>
+              <span class="tit">커뮤니티</span>
+              <span class="arrow-r">
+                <svg xmlns="//www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+              </span>
+            </a>
+            <ul id="dep2" >
+              <li><a href="/notice.html">공지사항</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Q&A</a></li>
+              <li>
+                <a href="#">
+                  알림톡
+                  <svg xmlns="//www.w3.org/2000/svg" class="arrow-r" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+                </a>
+                <ul class="dep3">
+                    <li>
+                      <a href="/talk.html">알림톡 발송 관리</a>
+                    </li>
+                    <li id="menu-mensagens-recebidas" >
+                      <a href="#">알림톡 발송 내역</a>
+                    </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">
+                  이메일
+                  <svg xmlns="//www.w3.org/2000/svg" class="arrow-r" viewBox="0 0 32 32"><path d="M13.8 24.196a1 1 0 0 0 1.414 0L21.7 17.71a.992.992 0 0 0 .292-.71.997.997 0 0 0-.292-.71l-6.486-6.486a1 1 0 0 0-1.414 1.414L19.582 17 13.8 22.782a1 1 0 0 0 0 1.414z"/></svg>
+                </a>
+                <ul class="dep3">
+                    <li>
+                      <a href="#">이메일 발송 관리</a>
+                    </li>
+                    <li id="menu-mensagens-recebidas" >
+                      <a href="#">이메일 발송 내역</a>
+                    </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <button type="button" class="btn-toggle bt-1">
+          <svg xmlns="//www.w3.org/2000/svg"  viewBox="0 0 32 32">
+            <path d="M8.294 16.688l5.918 6.69a1.007 1.007 0 0 0 1.422-1.422l-5.3-5.992 5.3-5.992a1.007 1.007 0 0 0-1.422-1.422l-5.918 6.688c-.2.2-.294.462-.292.724-.002.262.092.526.292.726zm14.514-8.14a1.007 1.007 0 0 0-1.422 0l-5.92 6.69c-.2.2-.296.462-.292.724-.002.262.092.526.292.726l5.918 6.69a1.007 1.007 0 0 0 1.422-1.422l-5.3-5.992 5.3-5.992a1.007 1.007 0 0 0 .002-1.424z"/>
+          </svg>
+          <span>사이드바 축소</span>
+        </button>
+      </nav>
+    </aside>
+    <!-- 서브페이지 -->
+    <div class="subPage">
+      <div class="container inner">
+        <ul class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="#">커뮤니티</a></li>
+          <li><a href="/talk.html">알림톡 발송 관리</a></li>
+        </ul>
+        <div class="content">
+          <div class="main-title text-bold">
+            <h2>알림톡</h2>
+          </div>
+          <div class="wrap-search">
+            <label for="list-search" class="blind">검색어 입력</label>
+            <input type="text" id="list-search" name="search-word" placeholder="검색어를 입력해 주세요.">
+            <button type="button" class="btn-search" id="ntc-btn-search" title="검색" data-popup-target="popupsrhWord"><span class="blind">검색</span></button>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="w100"><span>번호</span></th>
+                <th class="w100"><span>구분</span></th>
+                <th class="subject"><span>제목</span></th>
+                <th class="w140"><span>수신대상</span></th>
+                <th class="w120"><span>등록일</span></th>
+                <th class=" w120"><span>발송횟수</span></th>
+                <th class=" w120"><span>마지막 발송일</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="w100"><span>2</span></td>
+                <td class="w100"><span>알림톡</span></td>
+                <td class="subject"><a href="#none">아트센터 알림</a></td>
+                <td class="w140"><span>선택인원(2명)</span></td>
+                <td class="w120"><span>2022-06-10</span></td>
+                <td class="w120"><span>1</span></td>
+                <td class="w120"><span class="label-status blue">발송</span></td>
+              </tr>
+              <tr>
+                <td class="w100"><span>1</span></td>
+                <td class="w100"><span>SNS</span></td>
+                <td class="subject"><a href="#none">코멧위즈 메세지</a></td>
+                <td class="w140"><span>선택인원(1명)</span></td>
+                <td class="w120"><span>2022-06-01</span></td>
+                <td class="w120"><span>0</span></td>
+                <td class="w120"><span class="label-status">미발송</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <ul>
+            <li class="page page-prev">
+              <a href="#none">Prev</a>
+            </li>
+            <li class="page num active"><a href="#none">1</a></li>
+            <li class="page num"><a href="#none">2</a></li>
+            <li class="page num"><a href="#none">3</a></li>
+            <li class="page num"><a href="#none">4</a></li>
+            <li class="page num"><a href="#none">5</a></li>
+            <li class="page page-next">
+              <a href="#none">Next</a>
+            </li>
+          </ul>
+          <a href="/add-talk.html" class="btn btn-primary btn-pos-b">등록</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

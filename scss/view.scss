@@ -1,0 +1,147 @@
+@charset "utf-8";
+@import '_variables', '_mixin';
+
+
+.view-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  background-color: $white;
+  z-index: 1;
+
+  .content-wrap{
+    position: relative;
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cont-head, .cont-body{
+    display: block !important;
+  }
+}
+.cont-body{
+  flex: 1;
+}
+.cont-head{
+  display: block;
+  border-top: 1px solid $gray4 ;
+}
+.subject{
+  display: inline-block;
+  width: 100%;
+  font-size: 2.2rem;
+  padding: 1rem;
+  font-weight: 400;
+}
+.view-info{
+  padding: 0 0 1rem 0;
+  li{
+    position: relative;
+    display: inline-block;
+    padding: 0 1rem;
+    color: $gray4;
+    font-size: 1.4rem;
+    &+li::before {
+      content: "";
+      @include pos-absolute(vertical);
+      left: -.3rem;
+      width: .1rem;
+      height: 1.5rem;
+      background-color: $gray1;
+    }
+  }
+}
+.text-box{
+  height: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.viewNormal{
+  .content-wrap{
+    .cont-body{
+      display: inline-block;
+    }
+  }
+}
+.viewContent{
+  .view-wrap{
+    flex-direction: row;
+  }
+  .cont-type{
+    position: relative;
+    &.type-line::before{
+      content: "";
+      @include pos-absolute(vertical);
+      right: 0;
+      display: block;
+      width: .1rem;
+      height: 2.5rem;
+      background-color: $gray4;
+    }
+  }
+  .text-area{
+    max-width: 1400px;
+    height: 100%;
+    overflow: hidden;
+    // .story{
+    //   border-bottom:0 !important;
+    // }
+  }
+  .img-toggle{
+    .toggle-text{
+      width: 100%;
+      margin: 1rem 0;
+      border-radius: 7px;
+      text-align: center;
+      padding: 1rem;
+      font-size: unset;
+      border: 0.2rem solid $gray;
+    }
+    .slider{
+      position: relative;
+      opacity: 0;
+      visibility: hidden;
+      height: 0;
+      transition: all .3s ease;
+      &.active{
+        opacity: 1;
+        visibility: visible;
+        height: 100%;
+      }
+    }
+    li{
+      padding: 0 .5rem;
+    }
+    .slick-arrow{
+      @include pos-absolute(vertical);
+      width: 5rem;
+      height: 5rem;
+      border-radius: 100%;
+      font: 0/0 a;
+      background-color: $gray1;
+      background-repeat: no-repeat;
+      background-size: 20%;
+      background-position: center;
+      opacity: .5;
+      z-index: 9;
+      &.slick-prev{
+        left: 1rem;
+        background-image: url(/img/icon/arrow-left.svg);
+      }
+      &.slick-next{
+        right: 1rem;
+        background-image: url(/img/icon/arrow-right.svg);
+      }
+    }
+  
+  
+  
+  }
+  
+
+}  
+
+

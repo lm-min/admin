@@ -1,0 +1,138 @@
+textarea {
+  width: 100% !important;
+  height: 100% !important;
+  resize: none;
+}
+
+.attached .cont-box {
+  display: flex;
+}
+.attached form {
+  width: 100%;
+}
+.attached input[type=file] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+.attached .file_name {
+  margin: 0 0.5rem 0 0;
+}
+.attached .delete svg {
+  display: block;
+  height: 100%;
+  fill: red;
+}
+.attached .file_box {
+  display: flex;
+  align-items: center;
+}
+
+.title-box {
+  position: relative;
+}
+.title-box.fixed-text input[type=text] {
+  padding: 0 12rem 0 1rem;
+}
+.title-box .fixed {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  right: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.file-box {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem 0;
+}
+.file-box .delete {
+  margin: 0.4rem 0 0 0.6rem;
+  color: #dc3545;
+  font-size: 1.4rem;
+}
+
+.calendar label {
+  position: relative;
+  display: block;
+}
+.calendar label::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  right: 1.2rem;
+  width: 2rem;
+  height: 2.2rem;
+  background: #fff url(/img/calendar-gray.svg) no-repeat center center/contain;
+  background-size: 2rem;
+}
+.calendar .btn-custom {
+  border: 1px solid #ddd;
+  border-radius: 0;
+}
+.calendar .datepicker {
+  margin: 0 1rem 0 0;
+}
+.calendar .select-box {
+  min-width: 30rem;
+}
+.calendar select {
+  width: 100%;
+  -webkit-appearance: none;
+}
+.calendar i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  right: 1rem;
+}
+
+.add-textarea {
+  position: relative;
+  flex: 1;
+  min-height: 20rem !important;
+  background-color: #f7f7f7;
+}
+.add-textarea .cont-box {
+  position: absolute;
+  left: 15rem;
+  top: 0;
+  height: 100%;
+}
+.add-textarea .textarea-box {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.add-textarea .textarea-box .text-desc {
+  display: flex;
+  align-items: center;
+  min-height: 5rem;
+  margin: 0 0 -0.1rem 0;
+  padding: 0 1rem;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.add-textarea .textarea-box .text-desc span {
+  color: #ff416c;
+}
+.add-textarea .textarea-box .text-area {
+  height: 100%;
+  padding: 1rem;
+  background-color: #fff;
+}
+.add-textarea .textarea-box .text-area .cont-emphasize {
+  color: #ff416c;
+}

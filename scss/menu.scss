@@ -1,0 +1,15 @@
+@charset "utf-8";
+@import '_variables', '_mixin';
+
+
+
+// 본체
+.subPage{
+  width: 100%;
+  z-index: -1;
+  
+  overflow: hidden;
+}
+.container{
+  padding: 2rem;
+}

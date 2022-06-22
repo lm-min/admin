@@ -1,0 +1,30 @@
+#calendar {
+  margin: 2rem 0 0;
+  font-size: 1.5rem;
+}
+#calendar .fc-toolbar-title {
+  font-weight: 600;
+}
+#calendar .fc-event-title {
+  font-weight: 500;
+}
+#calendar .fc-button-group .fc-button-primary {
+  background-color: #00696d !important;
+}
+#calendar .fc-button-group .fc-button-primary:hover {
+  background-color: rgba(0, 105, 109, 0.8) !important;
+}
+#calendar .fc-button-primary {
+  border: 0;
+}
+#calendar .fc-today-button {
+  background-color: #fd7e14;
+}
+#calendar .fc-today-button:hover {
+  background-color: rgba(253, 125, 20, 0.9098039216);
+}
+#calendar .fc-col-header {
+  height: 2.7rem;
+  line-height: 2.7rem;
+  background-color: #f7f7f7;
+}
