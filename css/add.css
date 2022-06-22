@@ -21,14 +21,13 @@ textarea {
 .attached .file_name {
   margin: 0 0.5rem 0 0;
 }
+.attached .delete {
+  vertical-align: middle;
+}
 .attached .delete svg {
   display: block;
   height: 100%;
   fill: red;
-}
-.attached .file_box {
-  display: flex;
-  align-items: center;
 }
 
 .title-box {

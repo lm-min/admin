@@ -720,7 +720,10 @@ input[type="date"]::-webkit-calendar-picker-indicator{
   background-position: 10px center;
 }
 .hasDatepicker{cursor: pointer;}
+
 .ui-widget-header{
+  border: 0; 
+  background-color: transparent; 
   .ui-datepicker-prev{
     left: .8rem;
     .ui-icon{
@@ -758,6 +761,23 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     // color: red;
   }
 } 
+
+.ui-widget{ 
+  border: 0; 
+  overflow: hidden; 
+  background-color: #fff; 
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  .ui-state-default{
+    border: 0; 
+    background-color: transparent;
+    text-align: center;
+    padding: 1rem 0;
+    &.ui-state-hover{
+      background-color: $gray;
+      border-radius: 50%;
+    }
+  }
+}
 // lib - timepicker
 .time-box{
   display: flex;
@@ -864,19 +884,12 @@ textarea, select, option, button{
 .w120{width: 120px !important;}
 .w140{width: 140px !important;}
 .w32{width: 32px !important;}
-.mgr10{margin: 0 10px 0 0 !important;}
-.mgb20{margin: 0 0 20px 0 !important;}
-
-.circle{
-  border-radius: 50%;
-}
+.mr10{margin: 0 10px 0 0 !important;}
+.mb20{margin: 0 0 20px 0 !important;}
+.circle{border-radius: 100% !important}
 // flex-direction
-.col-2{
-  flex-basis: calc( (100% / 2) - 20px ) !important;
-}
-.row{
-  flex-basis: calc( (100%) - 20px ) !important;
-}
+.col-2{flex-basis: calc( (100% / 2) - 20px ) !important;}
+.row{flex-basis: calc( (100%) - 20px ) !important;}
 
 // index-card
 .card-list{

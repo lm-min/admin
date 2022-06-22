@@ -295,7 +295,7 @@
                     <p>이름(영문)</p>
                   </li>
                   <li class="cont-box">
-                    <input type="text" class="inpBox" placeholder="여권상 이용하는 영문 이름을 입력해주세요">
+                    <input type="text" class="inpBox" placeholder="영문 이름을 입력해주세요">
                   </li>
                 </ul>
                 <!-- 이메일 -->
@@ -313,7 +313,7 @@
                     <p>연락처</p>
                   </li>
                   <li class="cont-box">
-                    <input type="text" class="inpBox" placeholder="'-'을 제외한 휴대폰번호 11자리를을 입력해주세요">
+                    <input type="text" class="inpBox" maxlength="11" placeholder="'-'을 제외한 휴대폰번호 11자리 입력해주세요">
                   </li>
                 </ul>
                 <!-- 생년월일 -->
@@ -322,7 +322,7 @@
                     <p>생년월일</p>
                   </li>
                   <li class="cont-box">
-                    <input type="text" class="inpBox" placeholder="생년월일 8자를 입력해주세요">
+                    <input type="text" class="inpBox"  maxlength="8" placeholder="8자리(YYYYMMDD)">
                   </li>
                 </ul>
                 <!-- 장르 -->
@@ -378,7 +378,7 @@
           </div>
           <!-- 하단 버튼 -->
           <div class="btn-wrap">
-            <a href="#none" class="btn btn-option mgr10" onclick="history.back()">취소</a>
+            <a href="#none" class="btn btn-option mr10" onclick="history.back()">취소</a>
             <button class="btn btn-primary btn-save" onclick="save();">저장</button>
           </div>
         </div>

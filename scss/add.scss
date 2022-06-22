@@ -27,15 +27,12 @@ textarea{
     margin: 0 .5rem 0 0;
   }
   .delete{
+    vertical-align: middle;
     svg{
       display: block;
       height: 100%;
       fill: red;
     }
-  }
-  .file_box{
-    display: flex;
-    align-items: center;
   }
 }
 
