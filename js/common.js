@@ -11,14 +11,13 @@ $(document).ready(function(){
   $('.btn-toggle').on('click', function() {                
     if (toggle){
       $('.Page').addClass('on').removeClass('off');
-      // $(".side-nav span").css({"display":"none"});
       $(".side-nav").addClass('active');
     }
     else{
       $('.Page').removeClass('on').addClass('off');
       $('.side-nav').removeClass('active');
     }
-
+    
     toggle = !toggle;
   });
 

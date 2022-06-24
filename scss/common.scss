@@ -45,9 +45,9 @@
     ul, li{
       background-color: $black4;
     }
-    li:hover > a{
-      background-color: rgba(0, 0, 0, .2) !important;
-    }
+    // li:hover > a{
+    //   background-color: rgba(0, 0, 0, .2) !important;
+    // }
   }
   .btn-toggle{
     color: $white;
@@ -75,7 +75,6 @@
 // 공통
 
 .inner{
-  // max-width: 1880px;
   padding: 0 2rem;
   width: 100%;
   margin: 0 auto;
@@ -203,7 +202,7 @@
       transition: all 100ms ease-in-out;
     }
     .gnb span {
-      opacity: 0;
+      // opacity: 0;
       transition: all 50ms linear;
     }
   }
@@ -290,12 +289,8 @@
       }
       &:hover{
         >a{
-          // color: $white;  
           background-color: $gray5;
           transition: all 250ms ease-in-out;
-          // svg{
-          //   fill: $white;
-          // }
         }
         > ul{
           height: auto;

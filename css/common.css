@@ -47,9 +47,6 @@
 .dark-mode .side-nav ul, .dark-mode .side-nav li {
   background-color: #313131;
 }
-.dark-mode .side-nav li:hover > a {
-  background-color: rgba(0, 0, 0, 0.2) !important;
-}
 .dark-mode .btn-toggle {
   color: #fff;
   border-top-color: #707070;
@@ -209,7 +206,6 @@
   transition: all 100ms ease-in-out;
 }
 .Page.on .gnb span {
-  opacity: 0;
   transition: all 50ms linear;
 }
 .Page.off {

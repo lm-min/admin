@@ -1,0 +1,47 @@
+.Page {
+  min-height: 100vh;
+  margin: 0;
+}
+
+.side-nav {
+  top: 0;
+  height: 100%;
+}
+
+.arrow-r {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  right: 1rem;
+}
+
+.gnb {
+  padding: 1rem;
+}
+.gnb a {
+  position: relative;
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+
+.dep1 {
+  position: relative;
+}
+.dep1 a {
+  position: relative;
+  padding: 1rem;
+}
+.dep1 > a {
+  background-color: #fff !important;
+  border-radius: 5px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1294117647);
+}
+
+.dep2 {
+  margin: 1rem 0;
+  background-color: #ddd;
+  border-radius: 5px;
+  box-shadow: inset -1px -2px 10px rgba(0, 0, 0, 0.1294117647);
+}
