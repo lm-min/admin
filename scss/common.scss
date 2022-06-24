@@ -1,6 +1,71 @@
 @charset "utf-8";
 @import '_variables', '_mixin';
 
+// 화면전환테스트
+.btn-change{
+  position:fixed;
+  right: 2rem;
+  bottom: 2rem;
+  display: block;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  border: 2px solid $gray;
+  transition: all .5s ease;
+  span{
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    background-color: #000;
+    border-radius: 100%;
+    margin: 0 .5rem;
+  }
+}
+.dark-mode{
+  color: $white;
+  // transition: all .6s ease;
+  svg{fill: $white;}
+  .btn-change{
+    background-color: #000;
+    transition: float .5s ease;
+    span{
+      float: right;
+      background-color: #fff;
+    }
+  }
+  .search-form{
+    .icon-search{fill: $black3;}
+  }
+  .hd{
+    background-color: $black4;
+  }
+  .side-nav{
+    background-color: $black4;
+    ul, li{
+      background-color: $black4;
+    }
+    li:hover > a{
+      background-color: rgba(0, 0, 0, .2) !important;
+    }
+  }
+  .btn-toggle{
+    color: $white;
+    border-top-color: $black2;
+  }
+  .subPage{
+    background-color: $black3;
+  }
+  .card-list{
+    .card{
+      background-color: #2e343a;
+    }
+    .card-table thead tr{border-bottom-color: $black2;}
+    .card-table tbody tr{border-top-color: $black2;}
+  }
+}
+
+
 // 클래스테스트
 .bt-1{border-top: 1px solid $white2;}
 .bb-1{border-bottom: 1px solid #4b545c;}
@@ -720,7 +785,6 @@ input[type="date"]::-webkit-calendar-picker-indicator{
   background-position: 10px center;
 }
 .hasDatepicker{cursor: pointer;}
-
 .ui-widget-header{
   border: 0; 
   background-color: transparent; 
@@ -761,21 +825,39 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     // color: red;
   }
 } 
-
 .ui-widget{ 
   border: 0; 
   overflow: hidden; 
   background-color: #fff; 
   box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  .ui-state-active{
+    color: $black;
+    border: 0;
+    background-color: transparent;
+  }
   .ui-state-default{
-    border: 0; 
+    border: 1px solid $gray; 
     background-color: transparent;
     text-align: center;
-    padding: 1rem 0;
-    &.ui-state-hover{
-      background-color: $gray;
-      border-radius: 50%;
+    color: $black;
+    &.ui-corner-all{
+      font-size: 1.3rem;
     }
+    &.ui-state-hover{
+      background-color: $gray2;
+    }
+  }
+  .ui-datepicker-today{
+    background-color: $yellow !important;
+    .ui-state-default{
+      border-color: $yellow !important;
+    }
+    .ui-state-hover{
+      background-color: $yellow !important;
+    }
+  }
+  .ui-priority-secondary{
+    opacity: 1;
   }
 }
 // lib - timepicker

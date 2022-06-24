@@ -1,5 +1,72 @@
 @import url("//fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Noto+Sans+KR:wght@300;400;500&display=swap");
 @import url("//fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Noto+Sans+KR:wght@400;500&display=swap");
+.btn-change {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  display: block;
+  width: 6rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  transition: all 0.5s ease;
+}
+.btn-change span {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: #000;
+  border-radius: 100%;
+  margin: 0 0.5rem;
+}
+
+.dark-mode {
+  color: #fff;
+}
+.dark-mode svg {
+  fill: #fff;
+}
+.dark-mode .btn-change {
+  background-color: #000;
+  transition: float 0.5s ease;
+}
+.dark-mode .btn-change span {
+  float: right;
+  background-color: #fff;
+}
+.dark-mode .search-form .icon-search {
+  fill: #3d3d3d;
+}
+.dark-mode .hd {
+  background-color: #313131;
+}
+.dark-mode .side-nav {
+  background-color: #313131;
+}
+.dark-mode .side-nav ul, .dark-mode .side-nav li {
+  background-color: #313131;
+}
+.dark-mode .side-nav li:hover > a {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+.dark-mode .btn-toggle {
+  color: #fff;
+  border-top-color: #707070;
+}
+.dark-mode .subPage {
+  background-color: #3d3d3d;
+}
+.dark-mode .card-list .card {
+  background-color: #2e343a;
+}
+.dark-mode .card-list .card-table thead tr {
+  border-bottom-color: #707070;
+}
+.dark-mode .card-list .card-table tbody tr {
+  border-top-color: #707070;
+}
+
 .bt-1 {
   border-top: 1px solid #f0f0f0;
 }
@@ -795,15 +862,34 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: #fff;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
-.ui-widget .ui-state-default {
+.ui-widget .ui-state-active {
+  color: #444;
   border: 0;
   background-color: transparent;
+}
+.ui-widget .ui-state-default {
+  border: 1px solid #ddd;
+  background-color: transparent;
   text-align: center;
-  padding: 1rem 0;
+  color: #444;
+}
+.ui-widget .ui-state-default.ui-corner-all {
+  font-size: 1.3rem;
 }
 .ui-widget .ui-state-default.ui-state-hover {
-  background-color: #ddd;
-  border-radius: 50%;
+  background-color: #eaeaea;
+}
+.ui-widget .ui-datepicker-today {
+  background-color: #ffdb3e !important;
+}
+.ui-widget .ui-datepicker-today .ui-state-default {
+  border-color: #ffdb3e !important;
+}
+.ui-widget .ui-datepicker-today .ui-state-hover {
+  background-color: #ffdb3e !important;
+}
+.ui-widget .ui-priority-secondary {
+  opacity: 1;
 }
 
 .time-box {

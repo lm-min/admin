@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+  // 다크모드 테스트
+  $('.btn-change').on('click', function(){
+    $('body').toggleClass('dark-mode');
+  });
+
   // 사이드메뉴 사이즈 단축
   let toggle = true; toggle = true;
 

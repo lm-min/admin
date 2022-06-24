@@ -91,6 +91,12 @@
   height: 100%;
   overflow: hidden;
 }
+.viewContent .img-toggle img {
+  cursor: pointer;
+}
+.viewContent .img-toggle li {
+  padding: 0 0.5rem;
+}
 .viewContent .img-toggle .toggle-text {
   width: 100%;
   margin: 1rem 0;
@@ -111,9 +117,6 @@
   opacity: 1;
   visibility: visible;
   height: 100%;
-}
-.viewContent .img-toggle li {
-  padding: 0 0.5rem;
 }
 .viewContent .img-toggle .slick-arrow {
   position: absolute;

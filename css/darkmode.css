@@ -1,0 +1,18 @@
+.dark-mode body {
+  color: #fff;
+}
+.dark-mode svg {
+  fill: #fff;
+}
+.dark-mode .hd {
+  background-color: #3d3d3d;
+}
+.dark-mode .side-nav {
+  background-color: #3d3d3d;
+}
+.dark-mode .subPage {
+  background-color: #3d3d3d;
+}
+.dark-mode .card-list .card {
+  background-color: #2e343a;
+}

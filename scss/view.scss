@@ -91,6 +91,12 @@
     // }
   }
   .img-toggle{
+    img{
+      cursor: pointer;
+    }
+    li{
+      padding: 0 .5rem;
+    }
     .toggle-text{
       width: 100%;
       margin: 1rem 0;
@@ -111,9 +117,6 @@
         visibility: visible;
         height: 100%;
       }
-    }
-    li{
-      padding: 0 .5rem;
     }
     .slick-arrow{
       @include pos-absolute(vertical);
@@ -136,8 +139,6 @@
         background-image: url(/img/icon/arrow-right.svg);
       }
     }
-  
-  
   
   }
   
